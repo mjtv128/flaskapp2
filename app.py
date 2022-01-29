@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, jsonify
+from flask import Flask, render_template
 import requests
 import urllib.request, json
 
@@ -28,7 +28,5 @@ def random():
     return recipe
     
 if __name__ == "__main__":
-    # Setting debug to True enables debug output. This line should be
-    # removed before deploying a production app.
     application.debug = True
     application.run(host='0.0.0.0', port=8000)
